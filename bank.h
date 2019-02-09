@@ -194,6 +194,6 @@ private: System::Void CreateAccountToolStripMenuItem_Click(System::Object^ sende
 	CreateAccount^ CA = gcnew CreateAccount;
 	CA->MdiParent = this;
 	CA->Show();
-}
-};
+		}
+	};
 }
