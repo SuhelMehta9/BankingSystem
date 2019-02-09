@@ -97,6 +97,7 @@ namespace BankingSystem {
 			this->createAccountToolStripMenuItem->Name = L"createAccountToolStripMenuItem";
 			this->createAccountToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->createAccountToolStripMenuItem->Text = L"Create Account";
+			this->createAccountToolStripMenuItem->Click += gcnew System::EventHandler(this, &bank::CreateAccountToolStripMenuItem_Click);
 			// 
 			// addMoneyToolStripMenuItem
 			// 
@@ -140,6 +141,7 @@ namespace BankingSystem {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1323, 572);
 			this->Controls->Add(this->menuStrip1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
@@ -159,5 +161,8 @@ namespace BankingSystem {
 	private: System::Void ExitToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
+private: System::Void CreateAccountToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+}
 };
 }
