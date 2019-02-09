@@ -39,12 +39,36 @@ namespace BankingSystem {
 	protected:
 	private: System::Windows::Forms::ToolStripMenuItem^ menuToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ createAccountToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ addMoneyToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ withdrawMoneyToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ searchAnAccountToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ depositToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ withdrawToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ searchForAccountToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ showAllAccountToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ deleteAnAccountToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ deleteAccountToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ exitToolStripMenuItem;
+
+	protected:
+
+
+
+
+
+
+
+
+
+
+	protected:
+
+
+	protected:
+
+
+
+
+
+
+
+
 
 	private:
 		/// <summary>
@@ -63,11 +87,11 @@ namespace BankingSystem {
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->menuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->createAccountToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->addMoneyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->withdrawMoneyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->searchAnAccountToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->depositToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->withdrawToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->searchForAccountToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->showAllAccountToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->deleteAnAccountToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->deleteAccountToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->exitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
@@ -77,17 +101,16 @@ namespace BankingSystem {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->menuToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->RenderMode = System::Windows::Forms::ToolStripRenderMode::Professional;
 			this->menuStrip1->Size = System::Drawing::Size(1323, 24);
-			this->menuStrip1->TabIndex = 0;
+			this->menuStrip1->TabIndex = 4;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// menuToolStripMenuItem
 			// 
 			this->menuToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7) {
 				this->createAccountToolStripMenuItem,
-					this->addMoneyToolStripMenuItem, this->withdrawMoneyToolStripMenuItem, this->searchAnAccountToolStripMenuItem, this->showAllAccountToolStripMenuItem,
-					this->deleteAnAccountToolStripMenuItem, this->exitToolStripMenuItem
+					this->depositToolStripMenuItem, this->withdrawToolStripMenuItem, this->searchForAccountToolStripMenuItem, this->showAllAccountToolStripMenuItem,
+					this->deleteAccountToolStripMenuItem, this->exitToolStripMenuItem
 			});
 			this->menuToolStripMenuItem->Name = L"menuToolStripMenuItem";
 			this->menuToolStripMenuItem->Size = System::Drawing::Size(50, 20);
@@ -96,52 +119,53 @@ namespace BankingSystem {
 			// createAccountToolStripMenuItem
 			// 
 			this->createAccountToolStripMenuItem->Name = L"createAccountToolStripMenuItem";
-			this->createAccountToolStripMenuItem->Size = System::Drawing::Size(171, 22);
+			this->createAccountToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->createAccountToolStripMenuItem->Text = L"Create Account";
 			this->createAccountToolStripMenuItem->Click += gcnew System::EventHandler(this, &bank::CreateAccountToolStripMenuItem_Click);
 			// 
-			// addMoneyToolStripMenuItem
+			// depositToolStripMenuItem
 			// 
-			this->addMoneyToolStripMenuItem->Name = L"addMoneyToolStripMenuItem";
-			this->addMoneyToolStripMenuItem->Size = System::Drawing::Size(171, 22);
-			this->addMoneyToolStripMenuItem->Text = L"Add money";
+			this->depositToolStripMenuItem->Name = L"depositToolStripMenuItem";
+			this->depositToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->depositToolStripMenuItem->Text = L"Deposit";
 			// 
-			// withdrawMoneyToolStripMenuItem
+			// withdrawToolStripMenuItem
 			// 
-			this->withdrawMoneyToolStripMenuItem->Name = L"withdrawMoneyToolStripMenuItem";
-			this->withdrawMoneyToolStripMenuItem->Size = System::Drawing::Size(171, 22);
-			this->withdrawMoneyToolStripMenuItem->Text = L"Withdraw money";
+			this->withdrawToolStripMenuItem->Name = L"withdrawToolStripMenuItem";
+			this->withdrawToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->withdrawToolStripMenuItem->Text = L"Withdraw";
 			// 
-			// searchAnAccountToolStripMenuItem
+			// searchForAccountToolStripMenuItem
 			// 
-			this->searchAnAccountToolStripMenuItem->Name = L"searchAnAccountToolStripMenuItem";
-			this->searchAnAccountToolStripMenuItem->Size = System::Drawing::Size(171, 22);
-			this->searchAnAccountToolStripMenuItem->Text = L"Search an account";
+			this->searchForAccountToolStripMenuItem->Name = L"searchForAccountToolStripMenuItem";
+			this->searchForAccountToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->searchForAccountToolStripMenuItem->Text = L"Search for account";
 			// 
 			// showAllAccountToolStripMenuItem
 			// 
 			this->showAllAccountToolStripMenuItem->Name = L"showAllAccountToolStripMenuItem";
-			this->showAllAccountToolStripMenuItem->Size = System::Drawing::Size(171, 22);
+			this->showAllAccountToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->showAllAccountToolStripMenuItem->Text = L"Show all account";
 			// 
-			// deleteAnAccountToolStripMenuItem
+			// deleteAccountToolStripMenuItem
 			// 
-			this->deleteAnAccountToolStripMenuItem->Name = L"deleteAnAccountToolStripMenuItem";
-			this->deleteAnAccountToolStripMenuItem->Size = System::Drawing::Size(171, 22);
-			this->deleteAnAccountToolStripMenuItem->Text = L"Delete an account";
+			this->deleteAccountToolStripMenuItem->Name = L"deleteAccountToolStripMenuItem";
+			this->deleteAccountToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->deleteAccountToolStripMenuItem->Text = L"Delete account";
 			// 
 			// exitToolStripMenuItem
 			// 
 			this->exitToolStripMenuItem->Name = L"exitToolStripMenuItem";
-			this->exitToolStripMenuItem->Size = System::Drawing::Size(171, 22);
+			this->exitToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->exitToolStripMenuItem->Text = L"Exit";
 			this->exitToolStripMenuItem->Click += gcnew System::EventHandler(this, &bank::ExitToolStripMenuItem_Click);
 			// 
 			// bank
 			// 
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
-			this->AutoValidate = System::Windows::Forms::AutoValidate::EnableAllowFocusChange;
+			this->AutoValidate = System::Windows::Forms::AutoValidate::EnablePreventFocusChange;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1323, 572);
@@ -150,7 +174,6 @@ namespace BankingSystem {
 			this->IsMdiContainer = true;
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"bank";
-			this->StartPosition = System::Windows::Forms::FormStartPosition::WindowsDefaultBounds;
 			this->Text = L"Bank";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &bank::Bank_Load);
@@ -163,13 +186,14 @@ namespace BankingSystem {
 #pragma endregion
 	private: System::Void Bank_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void ExitToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Close();
-	}
+
+private: System::Void ExitToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
 private: System::Void CreateAccountToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	CreateAccount^ CA = gcnew CreateAccount();
+	CreateAccount^ CA = gcnew CreateAccount;
 	CA->MdiParent = this;
 	CA->Show();
-		}
-	};
+}
+};
 }
