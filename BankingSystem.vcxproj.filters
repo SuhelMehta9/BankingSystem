@@ -18,9 +18,15 @@
     <ClCompile Include="bank.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CreateAccount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateAccount.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

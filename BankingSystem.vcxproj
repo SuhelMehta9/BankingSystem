@@ -135,9 +135,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bank.cpp" />
+    <ClCompile Include="CreateAccount.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bank.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CreateAccount.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>

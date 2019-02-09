@@ -1,3 +1,4 @@
+#include "CreateAccount.h"
 #pragma once
 
 namespace BankingSystem {
@@ -95,59 +96,63 @@ namespace BankingSystem {
 			// createAccountToolStripMenuItem
 			// 
 			this->createAccountToolStripMenuItem->Name = L"createAccountToolStripMenuItem";
-			this->createAccountToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->createAccountToolStripMenuItem->Size = System::Drawing::Size(171, 22);
 			this->createAccountToolStripMenuItem->Text = L"Create Account";
 			this->createAccountToolStripMenuItem->Click += gcnew System::EventHandler(this, &bank::CreateAccountToolStripMenuItem_Click);
 			// 
 			// addMoneyToolStripMenuItem
 			// 
 			this->addMoneyToolStripMenuItem->Name = L"addMoneyToolStripMenuItem";
-			this->addMoneyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->addMoneyToolStripMenuItem->Size = System::Drawing::Size(171, 22);
 			this->addMoneyToolStripMenuItem->Text = L"Add money";
 			// 
 			// withdrawMoneyToolStripMenuItem
 			// 
 			this->withdrawMoneyToolStripMenuItem->Name = L"withdrawMoneyToolStripMenuItem";
-			this->withdrawMoneyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->withdrawMoneyToolStripMenuItem->Size = System::Drawing::Size(171, 22);
 			this->withdrawMoneyToolStripMenuItem->Text = L"Withdraw money";
 			// 
 			// searchAnAccountToolStripMenuItem
 			// 
 			this->searchAnAccountToolStripMenuItem->Name = L"searchAnAccountToolStripMenuItem";
-			this->searchAnAccountToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->searchAnAccountToolStripMenuItem->Size = System::Drawing::Size(171, 22);
 			this->searchAnAccountToolStripMenuItem->Text = L"Search an account";
 			// 
 			// showAllAccountToolStripMenuItem
 			// 
 			this->showAllAccountToolStripMenuItem->Name = L"showAllAccountToolStripMenuItem";
-			this->showAllAccountToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->showAllAccountToolStripMenuItem->Size = System::Drawing::Size(171, 22);
 			this->showAllAccountToolStripMenuItem->Text = L"Show all account";
 			// 
 			// deleteAnAccountToolStripMenuItem
 			// 
 			this->deleteAnAccountToolStripMenuItem->Name = L"deleteAnAccountToolStripMenuItem";
-			this->deleteAnAccountToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->deleteAnAccountToolStripMenuItem->Size = System::Drawing::Size(171, 22);
 			this->deleteAnAccountToolStripMenuItem->Text = L"Delete an account";
 			// 
 			// exitToolStripMenuItem
 			// 
 			this->exitToolStripMenuItem->Name = L"exitToolStripMenuItem";
-			this->exitToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->exitToolStripMenuItem->Size = System::Drawing::Size(171, 22);
 			this->exitToolStripMenuItem->Text = L"Exit";
 			this->exitToolStripMenuItem->Click += gcnew System::EventHandler(this, &bank::ExitToolStripMenuItem_Click);
 			// 
 			// bank
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->AutoSize = true;
+			this->AutoValidate = System::Windows::Forms::AutoValidate::EnableAllowFocusChange;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1323, 572);
 			this->Controls->Add(this->menuStrip1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->IsMdiContainer = true;
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"bank";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::WindowsDefaultBounds;
 			this->Text = L"Bank";
+			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &bank::Bank_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
@@ -162,7 +167,9 @@ namespace BankingSystem {
 		this->Close();
 	}
 private: System::Void CreateAccountToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	
-}
-};
+	CreateAccount^ CA = gcnew CreateAccount();
+	CA->MdiParent = this;
+	CA->Show();
+		}
+	};
 }
