@@ -16,11 +16,12 @@ int main(array<String^>^ args) {
 	try
 	{
 		String^ connString = L"datasource=127.0.0.1; port=3306; username=root; password=root";
-
+		MySqlConnection^ connDataBase = gcnew MySqlConnection(connString);
+		connDataBase->Open();
 	}
 	catch (Exception^ e)
 	{
-		
+		MessageBox::Show(e->Message);
 	}
 	
 }

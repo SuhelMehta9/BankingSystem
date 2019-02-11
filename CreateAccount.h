@@ -217,12 +217,21 @@ namespace BankingSystem {
 		this->Close();
 	}
 private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ AccountHolderName = textBox1->Text;
-	String^ AccountType = comboBox1->SelectedItem->ToString;
-	String^ AmountInString = textBox2->Text;
-	Decimal^ Amount = System::Convert::ToDecimal(AmountInString);
-	String^ AccountNumberInString = maskedTextBox1->Text;
-	Int32^ AccountNumber = System::Convert::ToInt32(AccountNumberInString);
+	try
+	{
+		String^ AccountHolderName = textBox1->Text;
+		String^ AccountType = comboBox1->SelectedItem->ToString();
+		String^ AmountInString = textBox2->Text;
+		Decimal^ Amount = System::Convert::ToDecimal(AmountInString);
+		String^ AccountNumberInString = maskedTextBox1->Text;
+		Int32^ AccountNumber = System::Convert::ToInt32(AccountNumberInString);
+		
+	}
+	catch (Exception^e)
+	{
+		
+	}
+	
 
 		}
 	};
