@@ -1,4 +1,5 @@
 #include "CreateAccount.h"
+#include "DeleteAccount.h"
 #pragma once
 
 namespace BankingSystem {
@@ -152,6 +153,7 @@ namespace BankingSystem {
 			this->deleteAccountToolStripMenuItem->Name = L"deleteAccountToolStripMenuItem";
 			this->deleteAccountToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->deleteAccountToolStripMenuItem->Text = L"Delete account";
+			this->deleteAccountToolStripMenuItem->Click += gcnew System::EventHandler(this, &bank::DeleteAccountToolStripMenuItem_Click);
 			// 
 			// exitToolStripMenuItem
 			// 
@@ -195,5 +197,11 @@ private: System::Void CreateAccountToolStripMenuItem_Click(System::Object^ sende
 	CA->MdiParent = this;
 	CA->Show();
 		}
+
+private: System::Void DeleteAccountToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	DeleteAccount^ DA = gcnew DeleteAccount;
+	DA->MdiParent = this;
+	DA->Show();
+}
 	};
 }
