@@ -226,7 +226,7 @@ private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e
 		Decimal^ Amount = System::Convert::ToDecimal(AmountInString);
 		String^ AccountNumberInString = maskedTextBox1->Text;
 		Int32^ AccountNumber = System::Convert::ToInt32(AccountNumberInString);
-		String^ connString = L"datasource=127.0.0.1; port=3306; username=root; password=root";
+		String^ connString = L"datasource=localhost; port=3306; username=root; password=root";
 		MySqlConnection^ connDataBase = gcnew MySqlConnection(connString);
 		connDataBase->Open();
 		MySqlCommand^ query = gcnew MySqlCommand("INSERT INTO `database`.`account` (`AccountNumber`, `AccountHolderName`, `AccountType`, `Balance`) VALUES('2', 'random', 'Saving', '5451544')",connDataBase);

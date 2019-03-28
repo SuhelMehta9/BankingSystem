@@ -52,11 +52,16 @@ namespace BankingSystem {
 			// 
 			// DeleteAccount
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1145, 496);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Inherit;
+			this->AutoSize = true;
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(1297, 565);
+			this->ControlBox = false;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"DeleteAccount";
+			this->RightToLeftLayout = true;
 			this->Text = L"DeleteAccount";
+			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->ResumeLayout(false);
 
 		}
